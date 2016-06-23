@@ -1,0 +1,28 @@
+ <div style="width:300px;background-color:lightGray;padding: 10px;border:1px solid gray; float:left;">
+          <h1>Enter the Meal Details</h1>
+          <form name="mealForm">	
+              <label for="price">Base Meal Price</label>
+              <input type="number" name="price" ng-model="vm.price" required />
+              <br/>
+              
+              <label for="tax">Tax %</label>
+              <input type="number" name="tax" ng-model="vm.taxRate" />
+              <br/>
+              <label for="tip">Tip %</label>
+              <input type="number" name="tip" ng-model="vm.tipRate" />
+              
+              <input type="submit" value="Submit" ng-click="vm.calcTotal(vm.price,vm.taxRate,vm.tipRate)">
+            
+          </form>
+              <br/>
+      </div>
+      
+       <div style="width:300px;background-color:lightGray;padding: 10px;border:1px solid gray;float:left;">
+          <h1>Customer Charges</h1>
+              <p>Subtotal: {{vm.subtotal}}</p>
+              <p>Tip:{{vm.tip}}</p>
+              <p>Tax:{{vm.tax}}</p>
+              <hr/>
+              <p>Total: {{vm.total}}</p>
+              <br/>
+        </div>
